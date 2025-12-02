@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de Tarefas</title>
-</head>
-<body onload="atualizar()">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de Tarefas</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body onload="atualizar()">
 
-    <h2>Lista de Tarefas</h2>
+        <script src="lista.js"></script>
 
-    <a href="cadastro.html">Cadastrar Nova Tarefa</a>
+        <nav>
+        
+            <div class="logo">
+                <h2>Lista de Tarefas</h2>
+            </div>
 
-    <div id="conteudo"></div>
+            <div class="cadastro">
+                <a href="cadastro.html">➕ Cadastrar Nova Tarefa</a>
+            </div>
+        
+        </nav>
 
-    <script src="lista.js"></script>
-</body>
+        <main>
+        
+            <section class="tarefas">
+
+            <div id="conteudo"></div>
+
+            </section>
+
+        </main>
+
+    </body>
 </html>

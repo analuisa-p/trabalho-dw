@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastrar Tarefa</title>
-    <link rel="stylesheet" href="cadastro.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastrar Tarefa</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
 
-<body>
+    <body>
 
-    <h2>Cadastrar Nova Tarefa</h2>
+        <script src="cadastro.js"></script>
 
-    <a href="lista.html">Voltar à Lista</a>
+        <script src="lista.js"></script>
 
-    <div class="campo">
-        <label>Prioridade</label>
-        <select id="prioridade">
-            <option value="">Selecione...</option>
-            <option value="Baixa">Baixa</option>
-            <option value="Normal">Normal</option>
-            <option value="Urgente">Urgente</option>
-        </select>
-    </div>
+        <nav>
+        
+            <div class="logo">
+                <h2>Lista de Tarefas</h2>
+            </div>
 
-    <div class="campo">
-        <label>Descrição</label>
-        <input id="descricao">
-    </div>
+            <div class="cadastro">
+                <a href="index.html">↩︎ Voltar à Lista</a>
+            </div>
+        
+        </nav>
 
-    <div class="campo">
-        <label>Local</label>
-        <input id="local">
-    </div>
+        <main>
 
-    <div class="campo">
-        <label>Data Limite</label>
-        <input id="dataLimite" type="datetime-local">
-    </div>
+            <section class="tarefas">
 
-    <div class="campo">
-        <label>Matrícula</label>
-        <input id="matricula" type="number">
-    </div>
+                <div class="prioridade">
+                    <label>Prioridade:</label>
+                    <select id="prioridade">
+                        <option value="" disabled selected>-- Selecionar --</option>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Urgente">Urgente</option>
+                    </select>
+                </div>
 
-    <h3>Recursos Necessários</h3>
+                <div class="descricao">
+                    <label>Descrição:</label>
+                    <input id="descricao">
+                </div>
 
-    <div class="campo">
-        <input id="recurso" placeholder="Digite um recurso e clique em adicionar">
-        <button onclick="addRecurso()">Adicionar Recurso</button>
-    </div>
+                <div class="local">
+                    <label>Local:</label>
+                    <input id="local">
+                </div>
 
-    <ul id="listaRecursos"></ul>
+                <div class="dataLimite">
+                    <label>Data Limite:</label>
+                    <input id="dataLimite" type="datetime-local">
+                </div>
 
-    <button onclick="salvar()">Salvar Tarefa</button>
+                <div class="matricula">
+                    <label>Matrícula:</label>
+                    <input id="matricula" type="number">
+                </div>
 
-    <script src="cadastro.js"></script>
-</body>
+                <h3>Recursos Necessários</h3>
+
+                <div class="recurso">
+                    <input id="recurso" placeholder="Digite um recurso e clique em adicionar">
+                    <button onclick="addRecurso()">➕ Adicionar Recurso</button>
+                </div>
+
+                <ul id="listaRecursos"></ul>
+
+                <div class="button">
+                    <button onclick="salvar()">Salvar Tarefa</button>
+                </div>
+
+            </section>
+
+        </main>
+
+    </body>
 </html>
