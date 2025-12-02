@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Tarefa</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+    <h2>Cadastrar Nova Tarefa</h2>
+
+    <a href="lista.html">Voltar à Lista</a>
+
+    <div class="campo">
+        <label>Prioridade</label>
+        <select id="prioridade">
+            <option value="">Selecione...</option>
+            <option value="Baixa">Baixa</option>
+            <option value="Normal">Normal</option>
+            <option value="Urgente">Urgente</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label>Descrição</label>
+        <input id="descricao">
+    </div>
+
+    <div class="campo">
+        <label>Local</label>
+        <input id="local">
+    </div>
+
+    <div class="campo">
+        <label>Data Limite</label>
+        <input id="dataLimite" type="datetime-local">
+    </div>
+
+    <div class="campo">
+        <label>Matrícula</label>
+        <input id="matricula" type="number">
+    </div>
+
+    <h3>Recursos Necessários</h3>
+
+    <div class="campo">
+        <input id="recurso" placeholder="Digite um recurso e clique em adicionar">
+        <button onclick="addRecurso()">Adicionar Recurso</button>
+    </div>
+
+    <ul id="listaRecursos"></ul>
+
+    <button onclick="salvar()">Salvar Tarefa</button>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
